@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'description_place.dart';
 
 void main() {
   runApp(MyApp());
 }
+
+String description = " officially as the Commonwealth of The Bahamas, is a country within the Lucayan Archipelago of the West Indies in the Caribbean. It takes up 97% of the Lucayan Archipelago's land area and is home to 88% of the archipelago's population. \nThe archipelagic state consists of fewer than 700 islands, cays, and islets in the Atlantic Ocean, and is located north of Cuba and Hispaniola Island (Haiti and the Dominican Republic), northwest of the Turks and Caicos Islands, southeast of the US state of Florida, and east of the Florida Keys.\nThe capital is Nassau on the island of New Providence. The Royal Bahamas Defence Force describes The Bahamas' territory as encompassing 470,000 km2 (180,000 sq mi) of ocean space.";
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -10,23 +13,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner:  false, 
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-        // This makes the visual density adapt to the platform that you run
-        // the app on. For desktop platforms, the controls will be smaller and
-        // closer together (more dense) than on mobile platforms.
+        primarySwatch: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Trips")
+        ),
+        body: new DescriptionPlace("Bahamas", 4, description),
+      )
     );
   }
 }
