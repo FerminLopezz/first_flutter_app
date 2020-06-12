@@ -74,6 +74,14 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  assets:
+    - assets/img/profile_pic.jpg
+    - assets/img/profile_pic2.jpg
+    - assets/img/profile_pic3.jpg
+    - assets/img/profile_pic4.jpg
+    
+  
+  
   fonts:
   - family: Lato
     fonts:
