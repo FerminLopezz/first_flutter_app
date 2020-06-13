@@ -2,8 +2,17 @@ import 'package:flutter/material.dart';
 import 'description_place.dart';
 import 'review_list.dart';
 import 'gradient_back.dart';
+import 'package:flutter/services.dart';
+import 'header_appBar.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light
+    )
+  );
+
   runApp(MyApp());
 }
 
@@ -21,10 +30,6 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("Trips")
-        ),
-        //body: new DescriptionPlace("Bahamas", 4, description),
         body: Stack(
           children: <Widget>[
             ListView(
@@ -33,7 +38,7 @@ class MyApp extends StatelessWidget {
                 ReviewList()
               ],
             ),
-            GradientBack(),
+            HeaderAppBar()
           ],
         )
       )

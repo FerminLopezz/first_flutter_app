@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class GradientBack extends StatelessWidget {
+
+  String title = "Osmin Psicko Trainer";
+
+  GradientBack(this.title);
+
    @override
    Widget build(BuildContext context) {
 
@@ -19,6 +24,19 @@ class GradientBack extends StatelessWidget {
 
          )
        ),
+
+      child: Text(
+        title,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 30.0,
+          fontFamily: "Lato",
+          fontWeight: FontWeight.bold
+        ),
+      ),
+      
+      alignment: Alignment(-0.9, -0.6),
+
      );
    }
 }
