@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'description_place.dart';
-import 'review_list.dart';
-import 'gradient_back.dart';
 import 'package:flutter/services.dart';
-import 'header_appBar.dart';
+import 'package:trips/trips.dart';
+
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -16,7 +14,7 @@ void main() {
   runApp(MyApp());
 }
 
-String description = "Known officially as the Commonwealth of The Bahamas, is a country within the Lucayan Archipelago of the West Indies in the Caribbean. It takes up 97% of the Lucayan Archipelago's land area and is home to 88% of the archipelago's population. \nThe archipelagic state consists of fewer than 700 islands, cays, and islets in the Atlantic Ocean, and is located north of Cuba and Hispaniola Island (Haiti and the Dominican Republic), northwest of the Turks and Caicos Islands, southeast of the US state of Florida, and east of the Florida Keys.\nThe capital is Nassau on the island of New Providence. The Royal Bahamas Defence Force describes The Bahamas' territory as encompassing 470,000 km2 (180,000 sq mi) of ocean space.";
+
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -29,19 +27,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.lightBlue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Scaffold(
-        body: Stack(
-          children: <Widget>[
-            ListView(
-              children: <Widget>[
-                DescriptionPlace("Bahamas", 4, description),
-                ReviewList()
-              ],
-            ),
-            HeaderAppBar()
-          ],
-        )
-      )
+      home: Trips()
     );
   }
 }
